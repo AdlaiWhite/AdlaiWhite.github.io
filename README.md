@@ -25,7 +25,7 @@
 + ICA15
 
 ## Weekly Assignments
-+ WA1
++ WA1 [Github Website] (https://adlaiwhite.github.io/wa/wa1.html)
 + WA2
 + WA3
 + WA4
