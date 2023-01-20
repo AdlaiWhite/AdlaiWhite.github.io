@@ -8,7 +8,7 @@
 + JSS
 
 ## In-Class Assignments
-+ ICA1
++ ICA1 [Google Drive] (https://docs.google.com/document/d/1ftxidpGLKECs0xzQbQql6BFZXoNdM80reimuoYHraMc/edit)
 + ICA2
 + ICA3
 + ICA4
