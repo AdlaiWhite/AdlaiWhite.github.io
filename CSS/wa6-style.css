@@ -90,7 +90,7 @@ body {
  /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column2 {
   float: left;
-  width: 10%;
+  width: 50%;
   padding: 5px;
 }
 
