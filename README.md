@@ -14,7 +14,7 @@
 + ICA4
 + ICA5 [ICA5] (https://adlaiwhite.github.io/ica/ica5/ica5.html)
 + ICA6
-+ ICA7
++ ICA7 [ICA7] (https://adlaiwhite.github.io/ica/ica5/ica7/ica7.html)
 + ICA8
 + ICA9
 + ICA10
