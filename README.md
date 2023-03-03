@@ -31,7 +31,7 @@
 + WA4 [Github Website] (https://adlaiwhite.github.io/wa/wa4.html)
 + WA5 [Github Website] (https://adlaiwhite.github.io/wa/wa5.html)
 + WA6 [Github Website] (https://adlaiwhite.github.io/wa/wa6.html)
-+ WA7
++ WA7 [Github Website] (https://adlaiwhite.github.io/wa/wa7.html)
 + WA8
 + WA9
 + WA10
