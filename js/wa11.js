@@ -2,7 +2,7 @@ const button = document.querySelector("#js-new-quote");
 
 button.addEventListener('click', getQuote) 
 
-const endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
+const endpoint = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
 
 async function getQuote(){
 
@@ -16,7 +16,7 @@ async function getQuote(){
         }
         const json = await response.json()
 
-        displayQuote(json.question);
+        displayQuote(json.message);
 
  }
  catch (err) {
