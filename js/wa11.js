@@ -2,12 +2,11 @@ const button = document.querySelector("#js-new-quote");
 
 button.addEventListener('click', getQuote) 
 
+button.addEventListener('click', getImage) 
+
 const endpoint = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
 
 async function getQuote(){
-
- //console.log ("It Works!");
-
  try {
 
         const response = await fetch (endpoint);
@@ -17,7 +16,6 @@ async function getQuote(){
         const json = await response.json()
 
         displayQuote(json.message);
-
  }
  catch (err) {
 
@@ -38,5 +36,36 @@ function displayQuote(quote) {
 
 getQuote();
 
+const endpoint2 = "https://api.catboys.com/img";
 
+async function getImage(){
+    try {
+   
+           const response = await fetch (endpoint2);
+           if (!response.ok){
+               throw Error(response.statusText)
+           }
+           const json = await response.json()
+   
+           displayImage(json.url);
+    }
+    catch (err) {
+   
+       console.log(err);
+       alert('Failed to fetch new trial');
+   
+    }
+}
 
+   function displayImage(image) {
+
+    const quoteText = document.querySelector("#js-image")
+    quoteText.style = image;
+
+    var img = document.createElement('img');
+    img.src = image;
+    document.getElementById('js-image').appendChild(img);
+
+}
+
+getImage();
