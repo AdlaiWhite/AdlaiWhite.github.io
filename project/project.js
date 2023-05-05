@@ -1,29 +1,77 @@
-const track = document.getElementById("image-track");
+const gameBoard = document.querySelector("#gameboard")
+const infoDisplay = document.querySelector("#info")
 
-window.onmousedown = e => {
-   track.dataset.mouseDownAt = e.clientX;
+const startCells = [
+
+ "", "", "", "", "", "", "", "", ""
+
+]
+
+let go = "circle"
+infoDisplay.textContent = "Circle goes first"
+
+function createBoard() {
+
+    startCells.forEach((_cell, index) => {
+        const cellElement = document.createElement('div')
+        cellElement.classList.add('square')
+        cellElement.id = index
+        cellElement.addEventListener('click', addGo)
+        gameBoard.append(cellElement)
+
+    })
 }
 
-window.onmousemove = e => {
+createBoard()
 
-    if(track.dataset.mouseDownAt === "0") return;
+function addGo(e) {
+   const goDisplay = document.createElement('div')
+   goDisplay.classList.add(go)
+   e.target.append(goDisplay)
+   go = go === "circle" ? "cross" : "circle"
+   infoDisplay.textContent = "It is now " + go + "'s go."
+   e.target.removeEventListener("click", addGo)
+   checkScore()
 
-    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-        maxDelta = window.innerWidth / 2;
-
-    const percentage = (mouseDelta / maxDelta) * -100;
-        nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage;
-
-    track.dataset.percentage = nextPercentage;
-
-    track.style.transform = 'translate(${percentage}%, -50%)' ;
 }
 
-window.onmouseup = () => {
-    track.dataset.mouseDownAt = "0";
-    track.dataset.prevPercentage = track.dataset.percentage;
+function checkScore() {
+    const allSquares = document.querySelectorAll(".square")
 
-    for(const image of track.getElementsByClassName("image")) {
-        image.style.objectPosition = '${nextPercentage + 100} 50%'
-    }
+    const winningCombos = [
+        [0,1,2], [3,4,5], [6,7,8], 
+        [0,3,6], [1,4,7], [2,5,8],
+        [0,4,8], [2,4,6]
+    ]
+    
+    winningCombos.forEach(array =>{
+       const circleWins = array.every(cell => 
+            allSquares[cell].firstChild?.classList.contains('circle'))
+
+        if (circleWins) {
+
+            infoDisplay.textContent = "Circle Wins!"
+            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+            return
+        }
+    })
+
+    winningCombos.forEach(array =>{
+        const crossWins = array.every(cell => 
+             allSquares[cell].firstChild?.classList.contains('cross'))
+ 
+         if (crossWins) {
+ 
+             infoDisplay.textContent = "Cross Wins!"
+             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+             return
+         }
+     })
+
+    
+
 }
+
+
+
+

@@ -5,7 +5,7 @@
 ## Projects
 + HTML(https://AdlaiWhite.github.io/html-midterm/html-midterm/page5.html)
 + CSS (https://adlaiwhite.github.io/wa/website.html)
-+ JSS
++ JSS   (https://adlaiwhite.github.io/project/project.html)
 
 ## In-Class Assignments
 + ICA1 [Google Drive] (https://docs.google.com/document/d/1ftxidpGLKECs0xzQbQql6BFZXoNdM80reimuoYHraMc/edit)
