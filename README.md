@@ -4,7 +4,7 @@
 
 ## Projects
 + HTML(https://AdlaiWhite.github.io/html-midterm/html-midterm/page5.html)
-+ CSS (https://adlaiwhite.github.io/wa/index.html)
++ CSS (https://adlaiwhite.github.io/index.html)
 + JSS   (https://adlaiwhite.github.io/project/project.html)
 
 ## In-Class Assignments
